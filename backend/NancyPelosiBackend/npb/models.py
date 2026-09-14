@@ -3,11 +3,10 @@ from django.db import models
 # Create your models here.
 class Listing(models.Model):
     title = models.CharField(max_length=120)
-    desc = models.TextField
-    isActive = models.BooleanField
     createdAt = models.DateField
-    expirationDate = models.DateField
-    options = models.JSONField(default=dict)
+    closeDate = models.DateField
+    category = models.CharField(max_length=20)
+
 
     def __str__(self):
         return self.title

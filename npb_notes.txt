@@ -1,0 +1,8 @@
+DJANGO REST APIS:
+
+First import the Django-restapi framework and add it into installed apps
+
+Then, create a seriaziler for your models to trun it from Django models 
+into python dictionaries then JSON strings
+
+Now you can implement the seriaziler into your view to return JSON in your responses
