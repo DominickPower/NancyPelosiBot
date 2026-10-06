@@ -4,4 +4,4 @@ from .ApiCalls import kalshi
 # Create your views here.
 
 def populateDB(request):
-    return kalshi.kalshiSerializer()
+    return kalshi.databaseReader()

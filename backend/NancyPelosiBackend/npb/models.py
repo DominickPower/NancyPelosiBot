@@ -1,12 +1,18 @@
 from django.db import models
-
+import uuid
 # Create your models here.
 class Listing(models.Model):
-    title = models.CharField(max_length=120)
-    createdAt = models.DateField
-    closeDate = models.DateField
-    category = models.CharField(max_length=20)
+    id = models.UUIDField(
+        primary_key=True,
+        default=uuid.uuid4
+    )
+    title = models.CharField(max_length=120, default="undefined")
+    ticker = models.CharField(max_length=20, default='undefined')
+    LastUpdated = models.CharField(max_length=40, default='0')
+    category = models.CharField(max_length=20, default='undefined')
 
+    def jsonSerialize(self):
+        jsonDict = {}
 
     def __str__(self):
         return self.title

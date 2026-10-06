@@ -6,3 +6,8 @@ Then, create a seriaziler for your models to trun it from Django models
 into python dictionaries then JSON strings
 
 Now you can implement the seriaziler into your view to return JSON in your responses
+
+DJANGO NOTES:
+
+Views are either functions that are called when a certain URL endpoint is reached, or they can be class based
+Modesl are python representations of our DB
